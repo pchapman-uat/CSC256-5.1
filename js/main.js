@@ -23,9 +23,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
     const RESET_BTN = document.getElementById("reset");
+
     REMOVE_FORM.element.addEventListener("submit", (e) => {
         e.preventDefault();
         alert("Removed")
+        let index = REMOVE_FORM.inputs.dropGame.value
+        console.log(index)
+        games.splice(index, 1)
+        REMOVE_FORM.update();
     })
     ADD_FORM.element.addEventListener("submit", (e) => {
         let value = ADD_FORM.input.textGame.value
@@ -40,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     RESET_BTN.addEventListener("click", () => {
         alert("Reset List");
         games = []
+        REMOVE_FORM.update();
         console.log(games)
     })
 })
