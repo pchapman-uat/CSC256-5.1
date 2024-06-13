@@ -5,6 +5,15 @@ document.addEventListener("DOMContentLoaded", () => {
         element: document.getElementById("remove"),
         inputs: {
             dropGame: document.getElementById("selectedGame")
+        },
+        update() {
+            this.inputs.dropGame.innerHTML = ""
+            games.forEach((element, i) => {
+                let option = document.createElement("option")
+                option.value = i;
+                option.innerHTML = element;
+                this.inputs.dropGame.appendChild(option)
+            });
         }
     }
     const ADD_FORM = {
@@ -19,14 +28,14 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Removed")
     })
     ADD_FORM.element.addEventListener("submit", (e) => {
+        let value = ADD_FORM.input.textGame.value
         e.preventDefault();
         alert("Added")
-        games.push(ADD_FORM.input.textGame.value);
+        games.push(value);
+        games.sort();
         console.log(games)
-        let element = document.createElement("option");
-        element.setAttribute("value", games.length-1);
-        element.innerHTML = ADD_FORM.input.textGame.value
-        REMOVE_FORM.inputs.dropGame.appendChild(element)
+  
+        REMOVE_FORM.update();
     })
     RESET_BTN.addEventListener("click", () => {
         alert("Reset List");
