@@ -3,3 +3,10 @@ body{
     background-size: 100%;
     background-repeat: repeat-y;
 }
+
+.games {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 100px;
+    padding: 1%;
+    margin: 3%;
+}
