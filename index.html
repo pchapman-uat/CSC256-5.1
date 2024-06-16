@@ -13,19 +13,24 @@
             Assignment 5.1: Manipulating Data with JavaScript
         </h1>
     </header>
-    <form id="remove">
-        <label for="selectedGame">Chose Game</label>
-        <select id="selectedGame">
-            
-        </select>
-        <input type="submit" value="Remove Game">
-    </form>
-    <form id="add">
-        <label for="inputGame">Game: </label>
-        <input id="inputGame" type="text" placeholder="Game Name">
-        <input type="submit" value="Add game">
-    </form>
-    <input type="button" value="Reset" id="reset">
+    <div class="forms">
+        <form id="remove">
+            <label for="selectedGame">Chose Game</label>
+            <select id="selectedGame">
+                
+            </select>
+            <input class="removeButton" type="submit" value="Remove Game">
+        </form>
+        <form id="add">
+            <label for="inputGame">Game: </label>
+            <input id="inputGame" type="text" placeholder="Game Name">
+            <input type="submit" value="Add game">
+        </form>
+        <div>
+            <input type="button" value="Reset" id="reset">
+        </div>
+
+    </div>
     <div class="games">
         <ul id="list">
 
