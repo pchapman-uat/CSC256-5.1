@@ -15,6 +15,7 @@ function removeGame(e){
 function addGame(e){
     let value = ADD_FORM.input.textGame.value
     e.preventDefault();
+    if(value =="") return;
     games.push(value);
     games.sort();
     console.log(games)
