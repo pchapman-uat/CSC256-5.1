@@ -21,6 +21,7 @@ header{
     border-radius: 200px;
     margin: 3%;
     padding: 5%;
+    font-size: larger;
 }
 .forms  > * {
     padding: 1%;
