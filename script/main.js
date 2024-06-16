@@ -40,6 +40,9 @@ function onLoad(){
                 item.innerHTML = element;
                 LIST.appendChild(item);
             });
+            if(games.length == 0){
+                LIST.innerHTML = "No games added"
+            }
         },
         resetList(){
             alert("Reset List");
